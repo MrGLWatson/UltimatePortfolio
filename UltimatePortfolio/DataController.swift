@@ -68,7 +68,9 @@ class DataController: ObservableObject {
         container.viewContext.delete(object)
     }
     
-    func deleteAll() {
+    func deleteAll() throws {
+        let viewContext = container.viewContext  // pool of data from disk
+
         let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
         let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
         _ = try? container.viewContext.execute(batchDeleteRequest1)
@@ -76,5 +78,7 @@ class DataController: ObservableObject {
         let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Project.fetchRequest()
         let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
         _ = try? container.viewContext.execute(batchDeleteRequest2)
+ 
+        try viewContext.save()
     }
 }

@@ -13,7 +13,7 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 Button("Add Data") {
-                    dataController.deleteAll()
+                    try? dataController.deleteAll()
                     try? dataController.createSampleData()
                 }
             }
