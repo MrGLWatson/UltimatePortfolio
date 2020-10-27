@@ -18,6 +18,8 @@
 		D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D488E05D2544359600691AD7 /* Main.xcdatamodeld */; };
 		D488E0622544397600691AD7 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488E0612544397600691AD7 /* DataController.swift */; };
 		D488E0692544479700691AD7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D488E0682544479700691AD7 /* CloudKit.framework */; };
+		D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A54225482E8400BC84E6 /* EditItemView.swift */; };
+		D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A545254837D800BC84E6 /* ItemRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		D488E0612544397600691AD7 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D488E0652544476700691AD7 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
 		D488E0682544479700691AD7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D4B7A54225482E8400BC84E6 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		D4B7A545254837D800BC84E6 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,9 @@
 				D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */,
 				D4619DA425445EB100CC203C /* HomeView.swift */,
 				D4619DA82544603500CC203C /* ProjectsView.swift */,
+				D4B7A545254837D800BC84E6 /* ItemRowView.swift */,
 				D488E04F254431AD00691AD7 /* ContentView.swift */,
+				D4B7A54225482E8400BC84E6 /* EditItemView.swift */,
 				D488E0612544397600691AD7 /* DataController.swift */,
 				D488E051254431AE00691AD7 /* Assets.xcassets */,
 				D488E056254431AE00691AD7 /* Info.plist */,
@@ -174,10 +180,12 @@
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
 				D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */,
 				D488E0622544397600691AD7 /* DataController.swift in Sources */,
+				D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */,
 				D488E050254431AD00691AD7 /* ContentView.swift in Sources */,
 				D4619DA525445EB100CC203C /* HomeView.swift in Sources */,
 				D488E04E254431AD00691AD7 /* UltimatePortfolioApp.swift in Sources */,
 				D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */,
+				D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
