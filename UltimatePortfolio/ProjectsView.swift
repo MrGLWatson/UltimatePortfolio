@@ -11,6 +11,9 @@ struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
     
+    @EnvironmentObject var dataController: DataController
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
     
@@ -30,11 +33,47 @@ struct ProjectsView: View {
                         ForEach(project.projectItems) { item in
                             ItemRowView(item: item)
                         }
+                        .onDelete { offsets in
+                            let allItems = project.projectItems
+                            
+                            for offset in offsets {  // index sets are sorted by default and items will be unique
+                                let item = allItems[offset] // items in the array will not move down and renumbered as they are being deleted until the save is done
+                                dataController.delete(item)
+                            }
+                            dataController.save()
+                        }
+                        
+                        if showClosedProjects == false {
+                            Button {
+                                withAnimation {
+                                    let item = Item(context: managedObjectContext)
+                                    item.project = project
+                                    item.creationDate = Date()
+                                    dataController.save()
+                                }
+                            } label: {
+                                Label("Add new Item", systemImage: "plus")
+                            }
+                        }
                     }
                 }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
+            .toolbar {
+                if showClosedProjects == false {
+                    Button {
+                        withAnimation {
+                            let project = Project(context: managedObjectContext)
+                            project.closed = false
+                            project.creationDate = Date()
+                            dataController.save()
+                        }
+                    } label: {
+                        Label("Add Project", systemImage: "plus")
+                    }
+                }
+            }
         }
     }
 }
@@ -45,6 +84,6 @@ struct ProjectsView_Previews: PreviewProvider {
         ProjectsView(showClosedProjects: false)
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
-
+        
     }
 }
