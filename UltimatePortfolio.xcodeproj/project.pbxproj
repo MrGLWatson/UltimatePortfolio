@@ -25,6 +25,10 @@
 		D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A54225482E8400BC84E6 /* EditItemView.swift */; };
 		D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A545254837D800BC84E6 /* ItemRowView.swift */; };
 		D4B7A5492548651C00BC84E6 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */; };
+		D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F34529255EB618001F1073 /* Bundle-Decodable.swift */; };
+		D4F3452D255EC077001F1073 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D4F3452C255EC077001F1073 /* Awards.json */; };
+		D4F34530255ECEA3001F1073 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3452F255ECEA3001F1073 /* Award.swift */; };
+		D4F34533255ECFE0001F1073 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F34532255ECFE0001F1073 /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		D4B7A54225482E8400BC84E6 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		D4B7A545254837D800BC84E6 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		D4F34529255EB618001F1073 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		D4F3452C255EC077001F1073 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		D4F3452F255ECEA3001F1073 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		D4F34532255ECFE0001F1073 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,12 @@
 				D4300343254C13DC002CD432 /* ProjectHeaderView.swift */,
 				D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */,
 				D488E0612544397600691AD7 /* DataController.swift */,
+				D4F34529255EB618001F1073 /* Bundle-Decodable.swift */,
 				D488E051254431AE00691AD7 /* Assets.xcassets */,
 				D4300346254C1A97002CD432 /* Colors.xcassets */,
+				D4F3452C255EC077001F1073 /* Awards.json */,
+				D4F3452F255ECEA3001F1073 /* Award.swift */,
+				D4F34532255ECFE0001F1073 /* AwardsView.swift */,
 				D488E056254431AE00691AD7 /* Info.plist */,
 				D488E053254431AE00691AD7 /* Preview Content */,
 				D488E05D2544359600691AD7 /* Main.xcdatamodeld */,
@@ -180,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4300347254C1A97002CD432 /* Colors.xcassets in Resources */,
+				D4F3452D255EC077001F1073 /* Awards.json in Resources */,
 				D488E055254431AE00691AD7 /* Preview Assets.xcassets in Resources */,
 				D488E052254431AE00691AD7 /* Assets.xcassets in Resources */,
 			);
@@ -194,8 +207,11 @@
 			files = (
 				D4619DA92544603500CC203C /* ProjectsView.swift in Sources */,
 				D4300344254C13DC002CD432 /* ProjectHeaderView.swift in Sources */,
+				D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */,
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
 				D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */,
+				D4F34530255ECEA3001F1073 /* Award.swift in Sources */,
+				D4F34533255ECFE0001F1073 /* AwardsView.swift in Sources */,
 				D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */,
 				D430034B254C4213002CD432 /* EditProjectView.swift in Sources */,
 				D488E0622544397600691AD7 /* DataController.swift in Sources */,
