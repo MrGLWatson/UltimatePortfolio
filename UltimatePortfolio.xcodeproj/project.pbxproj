@@ -16,6 +16,9 @@
 		D4619DA92544603500CC203C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DA82544603500CC203C /* ProjectsView.swift */; };
 		D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */; };
 		D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */; };
+		D46C15D72573D02E0024C1C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D46C15D92573D02E0024C1C0 /* Localizable.strings */; };
+		D46C15DB2573D1750024C1C0 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D46C15DD2573D1750024C1C0 /* Localizable.stringsdict */; };
+		D46C15E02573D3580024C1C0 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D46C15E22573D3580024C1C0 /* Awards.json */; };
 		D488E04E254431AD00691AD7 /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */; };
 		D488E050254431AD00691AD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488E04F254431AD00691AD7 /* ContentView.swift */; };
 		D488E052254431AE00691AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D488E051254431AE00691AD7 /* Assets.xcassets */; };
@@ -27,7 +30,6 @@
 		D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A545254837D800BC84E6 /* ItemRowView.swift */; };
 		D4B7A5492548651C00BC84E6 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */; };
 		D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F34529255EB618001F1073 /* Bundle-Decodable.swift */; };
-		D4F3452D255EC077001F1073 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D4F3452C255EC077001F1073 /* Awards.json */; };
 		D4F34530255ECEA3001F1073 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3452F255ECEA3001F1073 /* Award.swift */; };
 		D4F34533255ECFE0001F1073 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F34532255ECFE0001F1073 /* AwardsView.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,12 @@
 		D4619DA82544603500CC203C /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D46C15D82573D02E0024C1C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D46C15DA2573D04C0024C1C0 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D46C15DC2573D1750024C1C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D46C15DE2573D17D0024C1C0 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		D46C15E12573D3580024C1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Awards.json; sourceTree = "<group>"; };
+		D46C15E32573D3650024C1C0 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
 		D488E04A254431AD00691AD7 /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		D488E04F254431AD00691AD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,7 +64,6 @@
 		D4B7A545254837D800BC84E6 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		D4F34529255EB618001F1073 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
-		D4F3452C255EC077001F1073 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
 		D4F3452F255ECEA3001F1073 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		D4F34532255ECFE0001F1073 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +107,8 @@
 				D43743CB255AAAA000F7A8ED /* SelectSomethingView.swift */,
 				D430034A254C4213002CD432 /* EditProjectView.swift */,
 				D4B7A545254837D800BC84E6 /* ItemRowView.swift */,
+				D46C15D92573D02E0024C1C0 /* Localizable.strings */,
+				D46C15DD2573D1750024C1C0 /* Localizable.stringsdict */,
 				D488E04F254431AD00691AD7 /* ContentView.swift */,
 				D447CCFD256D2851000FC661 /* ColorAdditions.swift */,
 				D4B7A54225482E8400BC84E6 /* EditItemView.swift */,
@@ -109,7 +118,7 @@
 				D4F34529255EB618001F1073 /* Bundle-Decodable.swift */,
 				D488E051254431AE00691AD7 /* Assets.xcassets */,
 				D4300346254C1A97002CD432 /* Colors.xcassets */,
-				D4F3452C255EC077001F1073 /* Awards.json */,
+				D46C15E22573D3580024C1C0 /* Awards.json */,
 				D4F3452F255ECEA3001F1073 /* Award.swift */,
 				D4F34532255ECFE0001F1073 /* AwardsView.swift */,
 				D488E056254431AE00691AD7 /* Info.plist */,
@@ -178,6 +187,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hu,
 			);
 			mainGroup = D488E041254431AD00691AD7;
 			productRefGroup = D488E04B254431AD00691AD7 /* Products */;
@@ -194,10 +204,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C15D72573D02E0024C1C0 /* Localizable.strings in Resources */,
 				D4300347254C1A97002CD432 /* Colors.xcassets in Resources */,
-				D4F3452D255EC077001F1073 /* Awards.json in Resources */,
+				D46C15E02573D3580024C1C0 /* Awards.json in Resources */,
 				D488E055254431AE00691AD7 /* Preview Assets.xcassets in Resources */,
 				D488E052254431AE00691AD7 /* Assets.xcassets in Resources */,
+				D46C15DB2573D1750024C1C0 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +242,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D46C15D92573D02E0024C1C0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D46C15D82573D02E0024C1C0 /* en */,
+				D46C15DA2573D04C0024C1C0 /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D46C15DD2573D1750024C1C0 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D46C15DC2573D1750024C1C0 /* en */,
+				D46C15DE2573D17D0024C1C0 /* hu */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		D46C15E22573D3580024C1C0 /* Awards.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D46C15E12573D3580024C1C0 /* Base */,
+				D46C15E32573D3650024C1C0 /* hu */,
+			);
+			name = Awards.json;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D488E057254431AE00691AD7 /* Debug */ = {
