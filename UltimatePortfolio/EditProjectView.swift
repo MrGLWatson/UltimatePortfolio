@@ -56,6 +56,13 @@ struct EditProjectView: View {
                             color = item
                             update()
                         }
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityAddTraits(
+                            item == color
+                                ? [.isButton, .isSelected]
+                                : .isButton // we are a button and if color matches we are also selected
+                        )
+                        .accessibilityLabel(LocalizedStringKey(item))
                     }
                 }
                 .padding(.vertical)
