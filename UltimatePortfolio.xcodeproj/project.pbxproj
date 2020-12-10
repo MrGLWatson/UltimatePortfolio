@@ -26,6 +26,8 @@
 		D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D488E05D2544359600691AD7 /* Main.xcdatamodeld */; };
 		D488E0622544397600691AD7 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488E0612544397600691AD7 /* DataController.swift */; };
 		D488E0692544479700691AD7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D488E0682544479700691AD7 /* CloudKit.framework */; };
+		D4AEF84B25822CBA00A1507C /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AEF84A25822CBA00A1507C /* ItemListView.swift */; };
+		D4AEF84E25822EAB00A1507C /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AEF84D25822EAB00A1507C /* ProjectSummaryView.swift */; };
 		D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A54225482E8400BC84E6 /* EditItemView.swift */; };
 		D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A545254837D800BC84E6 /* ItemRowView.swift */; };
 		D4B7A5492548651C00BC84E6 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */; };
@@ -60,6 +62,8 @@
 		D488E0612544397600691AD7 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		D488E0652544476700691AD7 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
 		D488E0682544479700691AD7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D4AEF84A25822CBA00A1507C /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		D4AEF84D25822EAB00A1507C /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		D4B7A54225482E8400BC84E6 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		D4B7A545254837D800BC84E6 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				D488E0652544476700691AD7 /* UltimatePortfolio.entitlements */,
 				D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */,
 				D4619DA425445EB100CC203C /* HomeView.swift */,
+				D4AEF84D25822EAB00A1507C /* ProjectSummaryView.swift */,
+				D4AEF84A25822CBA00A1507C /* ItemListView.swift */,
 				D4619DA82544603500CC203C /* ProjectsView.swift */,
 				D43743CB255AAAA000F7A8ED /* SelectSomethingView.swift */,
 				D430034A254C4213002CD432 /* EditProjectView.swift */,
@@ -225,11 +231,13 @@
 				D4300344254C13DC002CD432 /* ProjectHeaderView.swift in Sources */,
 				D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */,
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
+				D4AEF84B25822CBA00A1507C /* ItemListView.swift in Sources */,
 				D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */,
 				D4F34530255ECEA3001F1073 /* Award.swift in Sources */,
 				D4F34533255ECFE0001F1073 /* AwardsView.swift in Sources */,
 				D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */,
 				D430034B254C4213002CD432 /* EditProjectView.swift in Sources */,
+				D4AEF84E25822EAB00A1507C /* ProjectSummaryView.swift in Sources */,
 				D488E0622544397600691AD7 /* DataController.swift in Sources */,
 				D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */,
 				D488E050254431AD00691AD7 /* ContentView.swift in Sources */,

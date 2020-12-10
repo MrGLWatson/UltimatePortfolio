@@ -5,7 +5,7 @@
 //  Created by Gary Watson on 25/10/2020.
 //
 
-import Foundation
+import SwiftUI
 
 extension Project {
     static let colors = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"]
@@ -44,6 +44,10 @@ extension Project {
             }
             return first.itemCreationDate < second.itemCreationDate
         }
+    }
+    
+    var label: LocalizedStringKey {
+        LocalizedStringKey("\(projectTitle),\(projectItems.count) items, \(completionAmount * 100, specifier: "%g")% complete.")
     }
     
     var completionAmount: Double {
