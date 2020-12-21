@@ -5,13 +5,17 @@
 //  Created by Gary Watson on 13/11/2020.
 //
 
+// swiftlint:disable_line_length
+
 import Foundation
 
 extension Bundle {
     // only use this for app bundled JSON, not stuff we get from internet
-    func decode<T: Decodable>(_ type: T.Type, from file: String, dateDecodingStrategy:
-                                JSONDecoder.DateDecodingStrategy = .deferredToDate, keyDecodingStrategy:
-                                    JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) -> T {
+    func decode<T: Decodable>(_ type: T.Type,
+                              from file: String,
+                              dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
+                              keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys
+                ) -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.")
         }
