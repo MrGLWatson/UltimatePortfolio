@@ -9,19 +9,16 @@ import SwiftUI
 
 struct AwardsView: View {
     static let tag: String? = "Awards"
-    
     @EnvironmentObject var dataController: DataController
     @State private var selectedAward = Award.example // initial value does not matter, but this way its not an optional.
     @State private var showingAwardDetails = false
-    
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
-    
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns:columns) {
+                LazyVGrid(columns: columns) {
                     ForEach(Award.allAwards) { award in
                         Button {
                             selectedAward = award

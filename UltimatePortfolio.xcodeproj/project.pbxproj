@@ -31,6 +31,7 @@
 		D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A54225482E8400BC84E6 /* EditItemView.swift */; };
 		D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A545254837D800BC84E6 /* ItemRowView.swift */; };
 		D4B7A5492548651C00BC84E6 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */; };
+		D4E0EF942598D59F00FF5F49 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4E0EF932598D59F00FF5F49 /* README.md */; };
 		D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F34529255EB618001F1073 /* Bundle-Decodable.swift */; };
 		D4F34530255ECEA3001F1073 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3452F255ECEA3001F1073 /* Award.swift */; };
 		D4F34533255ECFE0001F1073 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F34532255ECFE0001F1073 /* AwardsView.swift */; };
@@ -67,6 +68,7 @@
 		D4B7A54225482E8400BC84E6 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		D4B7A545254837D800BC84E6 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		D4E0EF932598D59F00FF5F49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D4F34529255EB618001F1073 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		D4F3452F255ECEA3001F1073 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		D4F34532255ECFE0001F1073 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				D488E05D2544359600691AD7 /* Main.xcdatamodeld */,
 				D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */,
 				D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */,
+				D4E0EF932598D59F00FF5F49 /* README.md */,
 			);
 			path = UltimatePortfolio;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				D46C15D72573D02E0024C1C0 /* Localizable.strings in Resources */,
 				D4300347254C1A97002CD432 /* Colors.xcassets in Resources */,
 				D46C15E02573D3580024C1C0 /* Awards.json in Resources */,
+				D4E0EF942598D59F00FF5F49 /* README.md in Resources */,
 				D488E055254431AE00691AD7 /* Preview Assets.xcassets in Resources */,
 				D488E052254431AE00691AD7 /* Assets.xcassets in Resources */,
 				D46C15DB2573D1750024C1C0 /* Localizable.stringsdict in Resources */,

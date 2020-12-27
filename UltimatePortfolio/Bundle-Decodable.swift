@@ -4,8 +4,7 @@
 //
 //  Created by Gary Watson on 13/11/2020.
 //
-
-// swiftlint:disable_line_length
+// swiftlint:disable line_length
 
 import Foundation
 
@@ -19,15 +18,12 @@ extension Bundle {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.")
         }
-        
         guard let data = try? Data(contentsOf: url) else {
             fatalError("Failed to load \(file) from bundle.")
         }
-        
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = dateDecodingStrategy
         decoder.keyDecodingStrategy = keyDecodingStrategy
-        
         do {
             return try decoder.decode(T.self, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct ProjectSummaryView: View {
     @ObservedObject var project: Project
     var body: some View {
@@ -17,7 +16,6 @@ struct ProjectSummaryView: View {
                 .foregroundColor(.secondary)
             Text(project.projectTitle)
                 .font(.title2)
-            
             ProgressView(value: project.completionAmount)
                 .accentColor(Color(project.projectColor))
         }

@@ -10,26 +10,18 @@ import SwiftUI
 struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-    
     @EnvironmentObject var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
-    
     @State private var showingSortOrder = false
-    
     @State private var sortOrder = Item.SortOrder.optimized
-    
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
-    
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
-        
-        
         projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [
             NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)
         ], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
     }
-    
     var projectsList: some View {
         List {
             ForEach(projects.wrappedValue) { project in
@@ -40,14 +32,11 @@ struct ProjectsView: View {
                     .onDelete { offsets in
                         delete(offsets, from: project)
                      }
-                    
                     if showClosedProjects == false {
                         Button {
                             addItem(to: project)
                         } label: {
-                            
                             Label("Add New Item", systemImage: "plus")
-                            
                         }
                     }
                 }
@@ -55,11 +44,16 @@ struct ProjectsView: View {
         }
         .listStyle(InsetGroupedListStyle())
     }
-    
     var addProjectToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
             if showClosedProjects == false {
                 Button(action: addProject) {
+                    // In IOS 14.3 Voiceover has a glitch that reads the label
+                    // "Add Project" as "Add" no matter what no matter what accessibility label
+                    // we give thisd toolbar button when using a label.
+                    // As a result , when voiveover is running, we use a text view for
+                    // the button instead, forcing a correct reading without losing
+                    // the original layout.
                     if UIAccessibility.isVoiceOverRunning {
                         Text("Add Project")
                     } else {
@@ -69,7 +63,6 @@ struct ProjectsView: View {
             }
         }
     }
-    
     var sortOrderToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
            Button {
@@ -79,7 +72,6 @@ struct ProjectsView: View {
            }
        }
     }
-    
     var body: some View {
         NavigationView {
             Group {
@@ -102,11 +94,9 @@ struct ProjectsView: View {
                     .default(Text("Title")) { sortOrder = .title }
                 ])
             }
-            
             SelectSomethingView()
         }
     }
-    
     func addProject() {
         withAnimation {
             let project = Project(context: managedObjectContext)
@@ -116,7 +106,6 @@ struct ProjectsView: View {
         }
 
     }
-    
     func addItem(to project: Project) {
         withAnimation {
             let item = Item(context: managedObjectContext)
@@ -125,13 +114,13 @@ struct ProjectsView: View {
             dataController.save()
         }
     }
-    
     func delete(_ offsets: IndexSet, from project: Project) {
         // use the sortorder as displayed, otherwise the item in unsorted order gets deleted
         let allItems = project.projectItems(using: sortOrder)
-        
         for offset in offsets {  // index sets are sorted by default and items will be unique
-            let item = allItems[offset] // items in the array will not move down and renumbered as they are being deleted until the save is done
+            let item = allItems[offset]
+            // items in the array will not move down and renumbered
+            // as they are being deleted until the save is done
             dataController.delete(item)
         }
         dataController.save()
@@ -145,6 +134,5 @@ struct ProjectsView_Previews: PreviewProvider {
         ProjectsView(showClosedProjects: false)
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
-        
     }
 }
