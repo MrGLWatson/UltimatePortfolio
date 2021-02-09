@@ -136,12 +136,12 @@
 		D4806C5325A87DCC000D4C71 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */,
-				D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */,
-				D447CCFD256D2851000FC661 /* ColorAdditions.swift */,
-				D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */,
 				D4F34529255EB618001F1073 /* Bundle-Decodable.swift */,
 				D4DFDDB525CAB4E5007DFB4A /* Sequence-Sorting.swift */,
+				D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */,
+				D447CCFD256D2851000FC661 /* ColorAdditions.swift */,
+				D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */,
+				D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,11 +255,11 @@
 		D4A42AA725AF01960020DAE4 /* UltimatePortfolioTests */ = {
 			isa = PBXGroup;
 			children = (
-				D4DFDDBD25CAE24A007DFB4A /* Fixtures */,
+				D4D7833225B873150074A5E6 /* ProjectTests.swift */,
 				D4D7833825B87E870074A5E6 /* AwardTests.swift */,
 				D4A42AA825AF01960020DAE4 /* UltimatePortfolioTests.swift */,
-				D4D7833225B873150074A5E6 /* ProjectTests.swift */,
 				D4A42AB225AF03FE0020DAE4 /* AssetTest.swift */,
+				D4DFDDBD25CAE24A007DFB4A /* Fixtures */,
 				D4A42AAA25AF01960020DAE4 /* Info.plist */,
 				D4DFDDB925CADDB2007DFB4A /* ExtensionTests.swift */,
 			);

@@ -12,11 +12,11 @@ class ExtensionTests: XCTestCase {
 
     func testSequenceKeyPathSortingSelf() {
         let items = [1, 4, 3, 2, 5]
-        let sortedItems = items.sorted(by: \.self) // soft using our own keyPath method
+        let sortedItems = items.sorted(by: \.self) // sort using our own keyPath method
         XCTAssertEqual(sortedItems, [1, 2, 3, 4, 5], "The sorted numbers must be ascending.")
     }
     
-    func testSequenceKeyPathCustom() {
+    func testSequenceKeyPathSortingCustom() {
         struct Example: Equatable {
             let value: String
         }
@@ -30,7 +30,7 @@ class ExtensionTests: XCTestCase {
             $0 > $1 // sort into decending order
         }
         
-        XCTAssertEqual(sortedItems, [example3, example2, example1], "Reverse sorting should yeid c, b, a.")
+        XCTAssertEqual(sortedItems, [example3, example2, example1], "Reverse sorting should yied c, b, a.")
     }
     
     func testBundleDecodingAwards() {
@@ -72,7 +72,7 @@ class ExtensionTests: XCTestCase {
         // When we set changedBinding
         changedBinding.wrappedValue = "Test"
         
-        // Then gthe example function should have been called.
+        // Then the example function should have been called.
         XCTAssertTrue(onChangeFunctionRun, "The onChange() function must bne run when the binding is changed.")
         
         
