@@ -17,6 +17,7 @@
 		D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */; };
 		D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */; };
 		D46B832B25D54961008E2B38 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B832A25D54961008E2B38 /* PerformanceTests.swift */; };
+		D46B833A25DFE1BC008E2B38 /* UltimatePortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B833925DFE1BC008E2B38 /* UltimatePortfolioUITests.swift */; };
 		D46C15D72573D02E0024C1C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D46C15D92573D02E0024C1C0 /* Localizable.strings */; };
 		D46C15DB2573D1750024C1C0 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D46C15DD2573D1750024C1C0 /* Localizable.stringsdict */; };
 		D46C15E02573D3580024C1C0 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D46C15E22573D3580024C1C0 /* Awards.json */; };
@@ -48,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D46B833C25DFE1BC008E2B38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D488E042254431AD00691AD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D488E049254431AD00691AD7;
+			remoteInfo = UltimatePortfolio;
+		};
 		D4A42AAB25AF01960020DAE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D488E042254431AD00691AD7 /* Project object */;
@@ -68,6 +76,9 @@
 		D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D46B832A25D54961008E2B38 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		D46B833725DFE1BC008E2B38 /* UltimatePortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltimatePortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46B833925DFE1BC008E2B38 /* UltimatePortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioUITests.swift; sourceTree = "<group>"; };
+		D46B833B25DFE1BC008E2B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46C15D82573D02E0024C1C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D46C15DA2573D04C0024C1C0 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D46C15DC2573D1750024C1C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -107,6 +118,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D46B833425DFE1BC008E2B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D488E047254431AD00691AD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D46B833825DFE1BC008E2B38 /* UltimatePortfolioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D46B833925DFE1BC008E2B38 /* UltimatePortfolioUITests.swift */,
+				D46B833B25DFE1BC008E2B38 /* Info.plist */,
+			);
+			path = UltimatePortfolioUITests;
+			sourceTree = "<group>";
+		};
 		D4806C5225A87DBD000D4C71 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +230,7 @@
 				D48D880225BEEDDE00A86E34 /* DevelopmentTests.swift */,
 				D488E04C254431AD00691AD7 /* UltimatePortfolio */,
 				D4A42AA725AF01960020DAE4 /* UltimatePortfolioTests */,
+				D46B833825DFE1BC008E2B38 /* UltimatePortfolioUITests */,
 				D488E04B254431AD00691AD7 /* Products */,
 				D488E0672544479700691AD7 /* Frameworks */,
 			);
@@ -213,6 +241,7 @@
 			children = (
 				D488E04A254431AD00691AD7 /* UltimatePortfolio.app */,
 				D4A42AA625AF01960020DAE4 /* UltimatePortfolioTests.xctest */,
+				D46B833725DFE1BC008E2B38 /* UltimatePortfolioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +310,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D46B833625DFE1BC008E2B38 /* UltimatePortfolioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D46B834025DFE1BC008E2B38 /* Build configuration list for PBXNativeTarget "UltimatePortfolioUITests" */;
+			buildPhases = (
+				D46B833325DFE1BC008E2B38 /* Sources */,
+				D46B833425DFE1BC008E2B38 /* Frameworks */,
+				D46B833525DFE1BC008E2B38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D46B833D25DFE1BC008E2B38 /* PBXTargetDependency */,
+			);
+			name = UltimatePortfolioUITests;
+			productName = UltimatePortfolioUITests;
+			productReference = D46B833725DFE1BC008E2B38 /* UltimatePortfolioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D488E049254431AD00691AD7 /* UltimatePortfolio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D488E059254431AE00691AD7 /* Build configuration list for PBXNativeTarget "UltimatePortfolio" */;
@@ -323,9 +370,13 @@
 		D488E042254431AD00691AD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					D46B833625DFE1BC008E2B38 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D488E049254431AD00691AD7;
+					};
 					D488E049254431AD00691AD7 = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -351,11 +402,19 @@
 			targets = (
 				D488E049254431AD00691AD7 /* UltimatePortfolio */,
 				D4A42AA525AF01960020DAE4 /* UltimatePortfolioTests */,
+				D46B833625DFE1BC008E2B38 /* UltimatePortfolioUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D46B833525DFE1BC008E2B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D488E048254431AD00691AD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +462,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D46B833325DFE1BC008E2B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D46B833A25DFE1BC008E2B38 /* UltimatePortfolioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D488E046254431AD00691AD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +515,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D46B833D25DFE1BC008E2B38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D488E049254431AD00691AD7 /* UltimatePortfolio */;
+			targetProxy = D46B833C25DFE1BC008E2B38 /* PBXContainerItemProxy */;
+		};
 		D4A42AAC25AF01960020DAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D488E049254431AD00691AD7 /* UltimatePortfolio */;
@@ -486,6 +558,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D46B833E25DFE1BC008E2B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59WWV9M44C;
+				INFOPLIST_FILE = UltimatePortfolioUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = watson.gary.UltimatePortfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UltimatePortfolio;
+			};
+			name = Debug;
+		};
+		D46B833F25DFE1BC008E2B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59WWV9M44C;
+				INFOPLIST_FILE = UltimatePortfolioUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = watson.gary.UltimatePortfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UltimatePortfolio;
+			};
+			name = Release;
+		};
 		D488E057254431AE00691AD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -695,6 +807,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D46B834025DFE1BC008E2B38 /* Build configuration list for PBXNativeTarget "UltimatePortfolioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46B833E25DFE1BC008E2B38 /* Debug */,
+				D46B833F25DFE1BC008E2B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		D488E045254431AD00691AD7 /* Build configuration list for PBXProject "UltimatePortfolio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
