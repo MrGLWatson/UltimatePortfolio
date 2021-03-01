@@ -38,6 +38,7 @@
 		D4B7A5492548651C00BC84E6 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */; };
 		D4D7833325B873150074A5E6 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7833225B873150074A5E6 /* ProjectTests.swift */; };
 		D4D7833925B87E870074A5E6 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7833825B87E870074A5E6 /* AwardTests.swift */; };
+		D4DCE84825ED0FF200C1EA63 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCE84725ED0FF200C1EA63 /* ProjectsViewModel.swift */; };
 		D4DFDDB625CAB4E5007DFB4A /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFDDB525CAB4E5007DFB4A /* Sequence-Sorting.swift */; };
 		D4DFDDBA25CADDB2007DFB4A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFDDB925CADDB2007DFB4A /* ExtensionTests.swift */; };
 		D4DFDDBF25CAE28B007DFB4A /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = D4DFDDBE25CAE28B007DFB4A /* DecodableDictionary.json */; };
@@ -107,6 +108,7 @@
 		D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		D4D7833225B873150074A5E6 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		D4D7833825B87E870074A5E6 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
+		D4DCE84725ED0FF200C1EA63 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		D4DFDDB525CAB4E5007DFB4A /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		D4DFDDB925CADDB2007DFB4A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		D4DFDDBE25CAE28B007DFB4A /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				D4B7A545254837D800BC84E6 /* ItemRowView.swift */,
 				D4B7A54225482E8400BC84E6 /* EditItemView.swift */,
 				D4619DA82544603500CC203C /* ProjectsView.swift */,
+				D4DCE84725ED0FF200C1EA63 /* ProjectsViewModel.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				D4619DA525445EB100CC203C /* HomeView.swift in Sources */,
 				D488E04E254431AD00691AD7 /* UltimatePortfolioApp.swift in Sources */,
 				D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */,
+				D4DCE84825ED0FF200C1EA63 /* ProjectsViewModel.swift in Sources */,
 				D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
