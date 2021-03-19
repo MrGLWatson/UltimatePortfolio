@@ -12,10 +12,8 @@ import SwiftUI
 /// An environment singleton responsible for managing our Core Data stack, including handing saving,
 /// counting fetch requests, tracking awards, and dealing with sample data.
 class DataController: ObservableObject {
-    
     /// The lone cloudkit container used to store all our data.
     let container: NSPersistentCloudKitContainer
-    
     /// Initialises a data controller either in memory (for temporary use such as testing and previewing).
     /// or on permanent storage (for use in regular app runs.)
     ///
@@ -33,7 +31,6 @@ class DataController: ObservableObject {
             if let error = error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
-            
             #if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
                 try?self.deleteAll()
@@ -42,7 +39,6 @@ class DataController: ObservableObject {
             #endif
         }
     }
-    
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
         do {
@@ -52,20 +48,15 @@ class DataController: ObservableObject {
         }
         return dataController
     }()
-    
     static let model: NSManagedObjectModel = {
         guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
             fatalError("Failed to locate model file")
         }
-        
         guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
             fatalError("Failed to load model file.")
         }
-        
         return managedObjectModel
     }()
-    
-    
     /// Creates example projects and items to make testing easier.
     /// - Throws: An NSError sent from calling save() on the NSManagedObjectContext
     func createSampleData() throws {
@@ -87,7 +78,6 @@ class DataController: ObservableObject {
         }
         try viewContext.save()
     }
-    
     /// Saves our Core Data context iff there are changes.  This silently ignores
     /// any errors caused by saving, but this should be fine because our
     /// attributes are optional.

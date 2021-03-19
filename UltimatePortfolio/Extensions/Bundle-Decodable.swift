@@ -38,9 +38,4 @@ extension Bundle {
             fatalError("Failed to deocde \(file) from bundle: \(error.localizedDescription)")
         }
     }
-    
-//    func testBundleDecodingAwards() {
-//        let awards = Bundle.main.decode([Award].self, from: "Awards.json")
-//        XCTAssertFalse(awards.isEmpty, "Awards.json should decode to a mom-empty array.")
-//    }
 }

@@ -10,12 +10,8 @@ import SwiftUI
 struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-    
     @StateObject var viewModel: ViewModel
-    
     @State private var showingSortOrder = false
-    
-    
     var projectsList: some View {
         List {
             ForEach(viewModel.projects) { project in
@@ -97,11 +93,9 @@ struct ProjectsView: View {
             SelectSomethingView()
         }
     }
-    
     init(dataController: DataController, showClosedProjects: Bool) {
         let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
         _viewModel = StateObject(wrappedValue: viewModel)
-        
     }
 
 }

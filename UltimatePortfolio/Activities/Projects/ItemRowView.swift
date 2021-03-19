@@ -23,11 +23,9 @@ struct ItemRowView: View {
         }
         .accessibilityLabel(viewModel.label)
     }
-    
     init(project: Project, item: Item) {
         let viewModel = ViewModel(project: project, item: item)
         _viewModel = StateObject(wrappedValue: viewModel)
-        
         self.item = item
     }
 }
