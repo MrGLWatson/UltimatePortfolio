@@ -258,15 +258,15 @@
 		D488E04C254431AD00691AD7 /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				D4806C5225A87DBD000D4C71 /* Activities */,
+				D4806C5325A87DCC000D4C71 /* Extensions */,
+				D4806C5A25A880B8000D4C71 /* Localization */,
+				D4806C5B25A880E8000D4C71 /* Configuration */,
 				D488E0612544397600691AD7 /* DataController.swift */,
 				D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */,
 				D488E051254431AE00691AD7 /* Assets.xcassets */,
 				D4300346254C1A97002CD432 /* Colors.xcassets */,
 				D488E04F254431AD00691AD7 /* ContentView.swift */,
-				D4806C5225A87DBD000D4C71 /* Activities */,
-				D4806C5B25A880E8000D4C71 /* Configuration */,
-				D4806C5325A87DCC000D4C71 /* Extensions */,
-				D4806C5A25A880B8000D4C71 /* Localization */,
 				D488E05D2544359600691AD7 /* Main.xcdatamodeld */,
 				D488E056254431AE00691AD7 /* Info.plist */,
 				D488E053254431AE00691AD7 /* Preview Content */,

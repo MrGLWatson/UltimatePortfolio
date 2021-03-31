@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 /// A class to handle reading or writing to the database.
@@ -86,7 +87,14 @@ class DataController: ObservableObject {
             try? container.viewContext.save()
         }
     }
-    func delete(_ object: NSManagedObject) {
+    func delete(_ object: Project) {
+        let id = object.objectID.uriRepresentation().absoluteString
+        CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+        container.viewContext.delete(object)
+    }
+    func delete(_ object: Item) {
+        let id = object.objectID.uriRepresentation().absoluteString
+        CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
         container.viewContext.delete(object)
     }
     func deleteAll() throws {
@@ -119,8 +127,35 @@ class DataController: ObservableObject {
             return awardCount >= award.value
         default:
             // an unknown award criterion; this should never be allowed
- //           fatalError("Unknown award criterion: \(award.criterion)")
-        return false // program is incomplete at the moment, remove this line and un comment above when complete
+            //           fatalError("Unknown award criterion: \(award.criterion)")
+            return false // program is incomplete at the moment, remove this line and un comment above when complete
         }
+    }
+
+    func update(_ item: Item) {
+        let itemID = item.objectID.uriRepresentation().absoluteString
+        let projectID = item.project?.objectID.uriRepresentation().absoluteString
+
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = item.itemTitle
+        attributeSet.contentDescription = item.detail
+
+        let searchableItem = CSSearchableItem(uniqueIdentifier: itemID,
+                                              domainIdentifier: projectID,
+                                              attributeSet: attributeSet
+        )
+        CSSearchableIndex.default().indexSearchableItems([searchableItem])
+        save()  // update coredata
+    }
+
+    func item(with uniqueIdentifier: String) -> Item? {
+        guard let url = URL(string: uniqueIdentifier) else {
+            return nil
+        }
+
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+        return try? container.viewContext.existingObject(with: id) as? Item
     }
 }
