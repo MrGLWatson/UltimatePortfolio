@@ -38,6 +38,7 @@
 		D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A54225482E8400BC84E6 /* EditItemView.swift */; };
 		D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A545254837D800BC84E6 /* ItemRowView.swift */; };
 		D4B7A5492548651C00BC84E6 /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */; };
+		D4D6BF60261F08CC00FDCFD3 /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6BF5F261F08CC00FDCFD3 /* UnlockManager.swift */; };
 		D4D7833325B873150074A5E6 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7833225B873150074A5E6 /* ProjectTests.swift */; };
 		D4D7833925B87E870074A5E6 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7833825B87E870074A5E6 /* AwardTests.swift */; };
 		D4DCE84825ED0FF200C1EA63 /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCE84725ED0FF200C1EA63 /* ProjectsViewModel.swift */; };
@@ -110,6 +111,8 @@
 		D4B7A54225482E8400BC84E6 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		D4B7A545254837D800BC84E6 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		D4D6BF5F261F08CC00FDCFD3 /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
+		D4D6BF64261F0E3D00FDCFD3 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		D4D7833225B873150074A5E6 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		D4D7833825B87E870074A5E6 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 		D4DCE84725ED0FF200C1EA63 /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 		D488E041254431AD00691AD7 = {
 			isa = PBXGroup;
 			children = (
+				D4D6BF5F261F08CC00FDCFD3 /* UnlockManager.swift */,
+				D4D6BF64261F0E3D00FDCFD3 /* Configuration.storekit */,
 				D48D880225BEEDDE00A86E34 /* DevelopmentTests.swift */,
 				D488E04C254431AD00691AD7 /* UltimatePortfolio */,
 				D4A42AA725AF01960020DAE4 /* UltimatePortfolioTests */,
@@ -489,6 +494,7 @@
 				D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */,
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
 				D4202CEF25F7945F007E905C /* HomeViewModel.swift in Sources */,
+				D4D6BF60261F08CC00FDCFD3 /* UnlockManager.swift in Sources */,
 				D4AEF84B25822CBA00A1507C /* ItemListView.swift in Sources */,
 				D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */,
 				D4F34530255ECEA3001F1073 /* Award.swift in Sources */,
