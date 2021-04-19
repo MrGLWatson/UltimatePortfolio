@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D4202CEF25F7945F007E905C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4202CEE25F7945F007E905C /* HomeViewModel.swift */; };
 		D4202CF425FB9009007E905C /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4202CF325FB9009007E905C /* ItemRowViewModel.swift */; };
+		D4238797262D79CE004EC194 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4238796262D79CE004EC194 /* SKProduct-LocalizedPrice.swift */; };
+		D423879C262D7ACC004EC194 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423879B262D7ACC004EC194 /* PurchaseButton.swift */; };
+		D42387A1262D7C36004EC194 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42387A0262D7C36004EC194 /* ProductView.swift */; };
+		D42387A6262D7EEE004EC194 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42387A5262D7EEE004EC194 /* UnlockView.swift */; };
 		D4300344254C13DC002CD432 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4300343254C13DC002CD432 /* ProjectHeaderView.swift */; };
 		D4300347254C1A97002CD432 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4300346254C1A97002CD432 /* Colors.xcassets */; };
 		D430034B254C4213002CD432 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430034A254C4213002CD432 /* EditProjectView.swift */; };
@@ -72,6 +76,10 @@
 /* Begin PBXFileReference section */
 		D4202CEE25F7945F007E905C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D4202CF325FB9009007E905C /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
+		D4238796262D79CE004EC194 /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
+		D423879B262D7ACC004EC194 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		D42387A0262D7C36004EC194 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		D42387A5262D7EEE004EC194 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		D4300343254C13DC002CD432 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		D4300346254C1A97002CD432 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D430034A254C4213002CD432 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
@@ -152,6 +160,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D42387AA262D9A71004EC194 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				D42387A0262D7C36004EC194 /* ProductView.swift */,
+				D423879B262D7ACC004EC194 /* PurchaseButton.swift */,
+				D4D6BF5F261F08CC00FDCFD3 /* UnlockManager.swift */,
+				D42387A5262D7EEE004EC194 /* UnlockView.swift */,
+			);
+			path = Unlock;
+			sourceTree = "<group>";
+		};
 		D46B833825DFE1BC008E2B38 /* UltimatePortfolioUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,12 +193,13 @@
 		D4806C5325A87DCC000D4C71 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D4F34529255EB618001F1073 /* Bundle-Decodable.swift */,
-				D4DFDDB525CAB4E5007DFB4A /* Sequence-Sorting.swift */,
 				D4B7A5482548651C00BC84E6 /* Binding-OnChange.swift */,
+				D4F34529255EB618001F1073 /* Bundle-Decodable.swift */,
 				D447CCFD256D2851000FC661 /* ColorAdditions.swift */,
 				D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */,
 				D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */,
+				D4DFDDB525CAB4E5007DFB4A /* Sequence-Sorting.swift */,
+				D4238796262D79CE004EC194 /* SKProduct-LocalizedPrice.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +252,8 @@
 		D4806C5B25A880E8000D4C71 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				D488E0652544476700691AD7 /* UltimatePortfolio.entitlements */,
+				D488E05D2544359600691AD7 /* Main.xcdatamodeld */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -239,9 +261,8 @@
 		D488E041254431AD00691AD7 = {
 			isa = PBXGroup;
 			children = (
-				D4D6BF5F261F08CC00FDCFD3 /* UnlockManager.swift */,
-				D4D6BF64261F0E3D00FDCFD3 /* Configuration.storekit */,
 				D48D880225BEEDDE00A86E34 /* DevelopmentTests.swift */,
+				D4D6BF64261F0E3D00FDCFD3 /* Configuration.storekit */,
 				D488E04C254431AD00691AD7 /* UltimatePortfolio */,
 				D4A42AA725AF01960020DAE4 /* UltimatePortfolioTests */,
 				D46B833825DFE1BC008E2B38 /* UltimatePortfolioUITests */,
@@ -263,7 +284,9 @@
 		D488E04C254431AD00691AD7 /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				D488E056254431AE00691AD7 /* Info.plist */,
 				D4806C5225A87DBD000D4C71 /* Activities */,
+				D42387AA262D9A71004EC194 /* Unlock */,
 				D4806C5325A87DCC000D4C71 /* Extensions */,
 				D4806C5A25A880B8000D4C71 /* Localization */,
 				D4806C5B25A880E8000D4C71 /* Configuration */,
@@ -272,11 +295,8 @@
 				D488E051254431AE00691AD7 /* Assets.xcassets */,
 				D4300346254C1A97002CD432 /* Colors.xcassets */,
 				D488E04F254431AD00691AD7 /* ContentView.swift */,
-				D488E05D2544359600691AD7 /* Main.xcdatamodeld */,
-				D488E056254431AE00691AD7 /* Info.plist */,
 				D488E053254431AE00691AD7 /* Preview Content */,
 				D4E0EF932598D59F00FF5F49 /* README.md */,
-				D488E0652544476700691AD7 /* UltimatePortfolio.entitlements */,
 			);
 			path = UltimatePortfolio;
 			sourceTree = "<group>";
@@ -490,7 +510,9 @@
 			files = (
 				D4619DA92544603500CC203C /* ProjectsView.swift in Sources */,
 				D447CCFE256D2851000FC661 /* ColorAdditions.swift in Sources */,
+				D423879C262D7ACC004EC194 /* PurchaseButton.swift in Sources */,
 				D4300344254C13DC002CD432 /* ProjectHeaderView.swift in Sources */,
+				D42387A1262D7C36004EC194 /* ProductView.swift in Sources */,
 				D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */,
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
 				D4202CEF25F7945F007E905C /* HomeViewModel.swift in Sources */,
@@ -502,6 +524,7 @@
 				D4DFDDB625CAB4E5007DFB4A /* Sequence-Sorting.swift in Sources */,
 				D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */,
 				D430034B254C4213002CD432 /* EditProjectView.swift in Sources */,
+				D42387A6262D7EEE004EC194 /* UnlockView.swift in Sources */,
 				D4AEF84E25822EAB00A1507C /* ProjectSummaryView.swift in Sources */,
 				D488E0622544397600691AD7 /* DataController.swift in Sources */,
 				D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */,
@@ -511,6 +534,7 @@
 				D488E04E254431AD00691AD7 /* UltimatePortfolioApp.swift in Sources */,
 				D4202CF425FB9009007E905C /* ItemRowViewModel.swift in Sources */,
 				D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */,
+				D4238797262D79CE004EC194 /* SKProduct-LocalizedPrice.swift in Sources */,
 				D4DCE84825ED0FF200C1EA63 /* ProjectsViewModel.swift in Sources */,
 				D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */,
 			);
