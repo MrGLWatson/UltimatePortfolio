@@ -1,4 +1,8 @@
 {
+  "identifier" : "39522EA8",
+  "nonRenewingSubscriptions" : [
+
+  ],
   "products" : [
     {
       "displayPrice" : "2.99",
@@ -8,7 +12,7 @@
         {
           "description" : "",
           "displayName" : "",
-          "locale" : "en_US"
+          "locale" : "en_GB"
         }
       ],
       "productID" : "com.watson.gary.UltimatePortfolio.unlock",
@@ -24,6 +28,6 @@
   ],
   "version" : {
     "major" : 1,
-    "minor" : 0
+    "minor" : 1
   }
 }

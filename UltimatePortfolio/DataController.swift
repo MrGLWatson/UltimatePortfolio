@@ -39,7 +39,6 @@ class DataController: ObservableObject {
     /// - Parameter defaults: The UserDefaults suite where user data should be stored.
     init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
         self.defaults = defaults
-        
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
         // For testing and previewing purposes, we create a temporary,
         // in-memory database by writing to /dev/null so our data is destroyed
@@ -251,4 +250,18 @@ class DataController: ObservableObject {
             SKStoreReviewController.requestReview(in: windowScene)
         }
     }
+
+    @discardableResult func addProject()  -> Bool{
+        let canCreate = fullVersionUnlocked || count(for: Project.fetchRequest()) < 3
+        if canCreate {
+            let project = Project(context: container.viewContext)
+            project.closed = false
+            project.creationDate = Date()
+            save()
+            return true
+        } else {
+            return false
+        }
+    }
+
 }

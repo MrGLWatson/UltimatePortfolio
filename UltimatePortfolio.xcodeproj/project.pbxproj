@@ -18,6 +18,8 @@
 		D430034B254C4213002CD432 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430034A254C4213002CD432 /* EditProjectView.swift */; };
 		D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43743CB255AAAA000F7A8ED /* SelectSomethingView.swift */; };
 		D447CCFE256D2851000FC661 /* ColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447CCFD256D2851000FC661 /* ColorAdditions.swift */; };
+		D44DBD8C264BE83800054C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DBD8B264BE83800054C3F /* AppDelegate.swift */; };
+		D44DBD8E264BE86500054C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DBD8D264BE86500054C3F /* SceneDelegate.swift */; };
 		D4619DA525445EB100CC203C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DA425445EB100CC203C /* HomeView.swift */; };
 		D4619DA92544603500CC203C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DA82544603500CC203C /* ProjectsView.swift */; };
 		D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */; };
@@ -85,6 +87,8 @@
 		D430034A254C4213002CD432 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		D43743CB255AAAA000F7A8ED /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		D447CCFD256D2851000FC661 /* ColorAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAdditions.swift; sourceTree = "<group>"; };
+		D44DBD8B264BE83800054C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D44DBD8D264BE86500054C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4619DA425445EB100CC203C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D4619DA82544603500CC203C /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				D488E056254431AE00691AD7 /* Info.plist */,
+				D44DBD8B264BE83800054C3F /* AppDelegate.swift */,
+				D44DBD8D264BE86500054C3F /* SceneDelegate.swift */,
 				D4806C5225A87DBD000D4C71 /* Activities */,
 				D42387AA262D9A71004EC194 /* Unlock */,
 				D4806C5325A87DCC000D4C71 /* Extensions */,
@@ -510,6 +516,7 @@
 			files = (
 				D4619DA92544603500CC203C /* ProjectsView.swift in Sources */,
 				D447CCFE256D2851000FC661 /* ColorAdditions.swift in Sources */,
+				D44DBD8E264BE86500054C3F /* SceneDelegate.swift in Sources */,
 				D423879C262D7ACC004EC194 /* PurchaseButton.swift in Sources */,
 				D4300344254C13DC002CD432 /* ProjectHeaderView.swift in Sources */,
 				D42387A1262D7C36004EC194 /* ProductView.swift in Sources */,
@@ -526,6 +533,7 @@
 				D430034B254C4213002CD432 /* EditProjectView.swift in Sources */,
 				D42387A6262D7EEE004EC194 /* UnlockView.swift in Sources */,
 				D4AEF84E25822EAB00A1507C /* ProjectSummaryView.swift in Sources */,
+				D44DBD8C264BE83800054C3F /* AppDelegate.swift in Sources */,
 				D488E0622544397600691AD7 /* DataController.swift in Sources */,
 				D4B7A546254837D800BC84E6 /* ItemRowView.swift in Sources */,
 				D488E050254431AD00691AD7 /* ContentView.swift in Sources */,
