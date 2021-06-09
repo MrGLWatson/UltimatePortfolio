@@ -9,7 +9,9 @@ import SwiftUI
 
 class SceneDelegate: NSObject, UIWindowSceneDelegate {
     @Environment(\.openURL) var openURL
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
         if let shortcutItem = connectionOptions.shortcutItem {
             guard let url = URL(string: shortcutItem.type) else {
                 return
