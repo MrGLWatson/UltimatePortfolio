@@ -34,7 +34,7 @@ struct UltimatePortfolioApp: App {
                     // our app losing focus as of macOS 11.1.
                     NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
                     perform: save)
-                .onAppear(perform: dataController.appLaunched)
+//                .onAppear(perform: dataController.appLaunched)
             // cannot call dataController.save directly from here
         }
     }

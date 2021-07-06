@@ -9,7 +9,7 @@ import CoreData
 import CoreSpotlight
 import StoreKit
 import SwiftUI
-import UserNotifications
+import WidgetKit
 
 /// A class to handle reading or writing to the database.
 /// An environment singleton responsible for managing our Core Data stack, including handing saving,
@@ -45,17 +45,17 @@ class DataController: ObservableObject {
         // after the app finishes running.
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
+        } else {
+            let groupID = "group.Watson.Gary.UltimatePortfolio"
+
+            if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: groupID) {
+                container.persistentStoreDescriptions.first?.url = url.appendingPathComponent("Main.sqlite")
+            }
         }
         container.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
-            #if DEBUG
-            if CommandLine.arguments.contains("enable-testing") {
-                try?self.deleteAll()
-                UIView.setAnimationsEnabled(false)
-            }
-            #endif
         }
     }
     static var preview: DataController = {
@@ -103,6 +103,7 @@ class DataController: ObservableObject {
     func save() {
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
+            WidgetCenter.shared.reloadAllTimelines()
         }
     }
     func delete(_ object: Project) {
@@ -115,39 +116,8 @@ class DataController: ObservableObject {
         CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
         container.viewContext.delete(object)
     }
-    func deleteAll() throws {
-        let viewContext = container.viewContext  // pool of data from disk
-
-        let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
-        let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
-        _ = try? container.viewContext.execute(batchDeleteRequest1)
-
-        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Project.fetchRequest()
-        let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
-        _ = try? container.viewContext.execute(batchDeleteRequest2)
-        try viewContext.save()
-    }
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
-    }
-    func hasEarned(award: Award) -> Bool {
-        switch award.criterion {
-        case "items":
-            // retuns true if they added a certain numvber of items
-            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-        case "complete":
-            // returns true if they completed a certain number of items
-            let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
-            fetchRequest.predicate = NSPredicate(format: "completed = true")
-            let awardCount = count(for: fetchRequest)
-            return awardCount >= award.value
-        default:
-            // an unknown award criterion; this should never be allowed
-            //           fatalError("Unknown award criterion: \(award.criterion)")
-            return false // program is incomplete at the moment, remove this line and un comment above when complete
-        }
     }
 
     func update(_ item: Item) {
@@ -177,79 +147,17 @@ class DataController: ObservableObject {
         return try? container.viewContext.existingObject(with: id) as? Item
     }
 
-    func addReminders(for project: Project, completion: @escaping (Bool) -> Void) {
-        let center = UNUserNotificationCenter.current()
-        center.getNotificationSettings { settings in
-            switch settings.authorizationStatus {
-            case .notDetermined:
-                self.requestNotifications { success in
-                    if success {
-                        self.placeReminders(for: project, completion: completion)
-                    } else {
-                        DispatchQueue.main.async {
-                            completion(false)
-                        }
-                    }
-                }
-            case .authorized:
-                self.placeReminders(for: project, completion: completion)
-            default:
-                DispatchQueue.main.async {
-                    completion(false)
-                }
-            }
-        }
-    }
 
-    func removeReminders(for project: Project) {
-        let center = UNUserNotificationCenter.current()
-        let id = project.objectID.uriRepresentation().absoluteString
-
-        center.removePendingNotificationRequests(withIdentifiers: [id])
-    }
-
-    private func requestNotifications(completion: @escaping (Bool) -> Void) {
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
-            completion(granted)
-        }
-    }
-
-    private func placeReminders(for project: Project, completion: @escaping (Bool) -> Void) {
-        let content = UNMutableNotificationContent()
-        content.title = project.projectTitle
-        content.sound = .default
-        if let projectDetail = project.detail {
-            content.subtitle = projectDetail
-        }
-
-        let components = Calendar.current.dateComponents([.hour, .minute], from: project.reminderTime ?? Date())
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-
-        let id = project.objectID.uriRepresentation().absoluteString
-        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
-
-        UNUserNotificationCenter.current().add(request) { error in
-            DispatchQueue.main.async {
-                if error == nil {
-                    completion(true)
-                } else {
-                    completion(false)
-                }
-            }
-        }
-    }
-
-    func appLaunched() {
-        guard count(for: Project.fetchRequest()) >= 5 else { return }
-
-        let allScenes = UIApplication.shared.connectedScenes
-        let scene = allScenes.first { $0.activationState == .foregroundActive }
-
-        if let windowScene = scene as? UIWindowScene {
-            SKStoreReviewController.requestReview(in: windowScene)
-        }
-    }
+ //   func appLaunched() {
+//        guard count(for: Project.fetchRequest()) >= 5 else { return }
+//
+//        let allScenes = UIApplication.shared.connectedScenes
+//        let scene = allScenes.first { $0.activationState == .foregroundActive }
+//
+//        if let windowScene = scene as? UIWindowScene {
+//            SKStoreReviewController.requestReview(in: windowScene)
+//        }
+//    }
 
     @discardableResult func addProject() -> Bool {
         let canCreate = fullVersionUnlocked || count(for: Project.fetchRequest()) < 3
@@ -264,4 +172,20 @@ class DataController: ObservableObject {
         }
     }
 
+    func fetchRequestForTopItems(count: Int) -> NSFetchRequest<Item> {
+        let itemRequest: NSFetchRequest<Item> = Item.fetchRequest()
+        let completedPredicate = NSPredicate(format: "completed = false")
+        let openPredicate = NSPredicate(format: "project.closed = false")
+        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
+        itemRequest.predicate = compoundPredicate
+        itemRequest.sortDescriptors = [
+            NSSortDescriptor(keyPath: \Item.priority, ascending: false)
+        ]
+        itemRequest.fetchLimit = count
+        return itemRequest
+    }
+
+    func results<T: NSManagedObject>(for fetchRequest: NSFetchRequest<T>) -> [T] {
+        return (try? container.viewContext.fetch(fetchRequest)) ?? []
+    }
 }
