@@ -16,6 +16,9 @@
 		D4300344254C13DC002CD432 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4300343254C13DC002CD432 /* ProjectHeaderView.swift */; };
 		D4300347254C1A97002CD432 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4300346254C1A97002CD432 /* Colors.xcassets */; };
 		D430034B254C4213002CD432 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D430034A254C4213002CD432 /* EditProjectView.swift */; };
+		D434C11C26B3F3D700474AE7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434C11B26B3F3D700474AE7 /* DataProvider.swift */; };
+		D434C11E26B3F43000474AE7 /* SimpleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434C11D26B3F43000474AE7 /* SimpleWidget.swift */; };
+		D434C12026B3F4C900474AE7 /* ComplexWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434C11F26B3F4C900474AE7 /* ComplexWidget.swift */; };
 		D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43743CB255AAAA000F7A8ED /* SelectSomethingView.swift */; };
 		D447CCFE256D2851000FC661 /* ColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447CCFD256D2851000FC661 /* ColorAdditions.swift */; };
 		D44DBD8C264BE83800054C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DBD8B264BE83800054C3F /* AppDelegate.swift */; };
@@ -24,6 +27,7 @@
 		D4619DA92544603500CC203C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DA82544603500CC203C /* ProjectsView.swift */; };
 		D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */; };
 		D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */; };
+		D46275B926A1A71A00F009FB /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46275B826A1A71A00F009FB /* DataController-StoreKit.swift */; };
 		D467F7192694558800142200 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D467F7182694558800142200 /* WidgetKit.framework */; };
 		D467F71B2694558800142200 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D467F71A2694558800142200 /* SwiftUI.framework */; };
 		D467F71E2694558800142200 /* PortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D467F71D2694558800142200 /* PortfolioWidget.swift */; };
@@ -39,6 +43,10 @@
 		D46C15D72573D02E0024C1C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D46C15D92573D02E0024C1C0 /* Localizable.strings */; };
 		D46C15DB2573D1750024C1C0 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D46C15DD2573D1750024C1C0 /* Localizable.stringsdict */; };
 		D46C15E02573D3580024C1C0 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D46C15E22573D3580024C1C0 /* Awards.json */; };
+		D470DC66269C43350030E29E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D46C15D92573D02E0024C1C0 /* Localizable.strings */; };
+		D470DC67269C4FD60030E29E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4300346254C1A97002CD432 /* Colors.xcassets */; };
+		D470DC68269C4FED0030E29E /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */; };
+		D470DC69269D8EA30030E29E /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DFDDB525CAB4E5007DFB4A /* Sequence-Sorting.swift */; };
 		D488E04E254431AD00691AD7 /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */; };
 		D488E050254431AD00691AD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488E04F254431AD00691AD7 /* ContentView.swift */; };
 		D488E052254431AE00691AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D488E051254431AE00691AD7 /* Assets.xcassets */; };
@@ -116,6 +124,9 @@
 		D4300343254C13DC002CD432 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		D4300346254C1A97002CD432 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D430034A254C4213002CD432 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		D434C11B26B3F3D700474AE7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		D434C11D26B3F43000474AE7 /* SimpleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWidget.swift; sourceTree = "<group>"; };
+		D434C11F26B3F4C900474AE7 /* ComplexWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWidget.swift; sourceTree = "<group>"; };
 		D43743CB255AAAA000F7A8ED /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		D447CCFD256D2851000FC661 /* ColorAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAdditions.swift; sourceTree = "<group>"; };
 		D44DBD8B264BE83800054C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +135,7 @@
 		D4619DA82544603500CC203C /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		D4619DAB2545929800CC203C /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D4619DAE254594DA00CC203C /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D46275B826A1A71A00F009FB /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 		D467F7172694558800142200 /* PortfolioWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PortfolioWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D467F7182694558800142200 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D467F71A2694558800142200 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -228,6 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				D467F71D2694558800142200 /* PortfolioWidget.swift */,
+				D434C11F26B3F4C900474AE7 /* ComplexWidget.swift */,
+				D434C11D26B3F43000474AE7 /* SimpleWidget.swift */,
+				D434C11B26B3F3D700474AE7 /* DataProvider.swift */,
 				D467F71F2694558800142200 /* Assets.xcassets */,
 				D467F7212694558800142200 /* Info.plist */,
 			);
@@ -359,6 +374,7 @@
 				D4806C5A25A880B8000D4C71 /* Localization */,
 				D4806C5B25A880E8000D4C71 /* Configuration */,
 				D488E0612544397600691AD7 /* DataController.swift */,
+				D46275B826A1A71A00F009FB /* DataController-StoreKit.swift */,
 				D467F72E2694593E00142200 /* DataController-Award.swift */,
 				D467F72C269457FA00142200 /* DataController-Reminders.swift */,
 				D488E04D254431AD00691AD7 /* UltimatePortfolioApp.swift */,
@@ -541,7 +557,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D470DC67269C4FD60030E29E /* Colors.xcassets in Resources */,
 				D467F7202694558800142200 /* Assets.xcassets in Resources */,
+				D470DC66269C43350030E29E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +624,12 @@
 				D467F729269456B900142200 /* Main.xcdatamodeld in Sources */,
 				D467F72B2694573400142200 /* DataController.swift in Sources */,
 				D467F71E2694558800142200 /* PortfolioWidget.swift in Sources */,
+				D434C11E26B3F43000474AE7 /* SimpleWidget.swift in Sources */,
+				D434C12026B3F4C900474AE7 /* ComplexWidget.swift in Sources */,
+				D434C11C26B3F3D700474AE7 /* DataProvider.swift in Sources */,
+				D470DC69269D8EA30030E29E /* Sequence-Sorting.swift in Sources */,
 				D467F72A2694571A00142200 /* Item-CoreDataHelpers.swift in Sources */,
+				D470DC68269C4FED0030E29E /* Project-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +655,7 @@
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
 				D4202CEF25F7945F007E905C /* HomeViewModel.swift in Sources */,
 				D4D6BF60261F08CC00FDCFD3 /* UnlockManager.swift in Sources */,
+				D46275B926A1A71A00F009FB /* DataController-StoreKit.swift in Sources */,
 				D4AEF84B25822CBA00A1507C /* ItemListView.swift in Sources */,
 				D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */,
 				D4F34530255ECEA3001F1073 /* Award.swift in Sources */,
