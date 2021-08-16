@@ -38,4 +38,3 @@ struct SimpleEntry: TimelineEntry {
     let date: Date
     let items: [Item]
 }
-

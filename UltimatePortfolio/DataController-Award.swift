@@ -8,7 +8,6 @@
 import Foundation
 import CoreData
 
-
 extension DataController {
     func hasEarned(award: Award) -> Bool {
         switch award.criterion {

@@ -42,15 +42,16 @@ struct HomeView: View {
                     }
                     .padding(.horizontal)
                     VStack(alignment: .leading) {
-                        ItemListView(title: "Up next", items: viewModel.upNext)
-                        ItemListView(title: "More to explore", items: viewModel.moreToExplore)
+                        ItemListView(title: "Up next", items: $viewModel.upNext)
+                        ItemListView(title: "More to explore", items: $viewModel.moreToExplore)
                     }
                 }
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
             .toolbar {
-                Button("Add Data", action: viewModel.addSampleData)
+                //Button("Add Data", action: viewModel.addSampleData)
+                Button("Delete All", action: viewModel.dataController.deleteAll)
             }
             .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
         }

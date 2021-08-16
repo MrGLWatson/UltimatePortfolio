@@ -73,7 +73,6 @@ struct ComplexPortfolioWidget: Widget {
     }
 }
 
-
 struct ComplexPortfolioWidget_Previews: PreviewProvider {
     static var previews: some View {
         PortfolioWidgetMultipleEntryView(entry: SimpleEntry(date: Date(), items: [Item.example]))
