@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41C553326E60AC0008E048C /* SharedProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C553226E60AC0008E048C /* SharedProject.swift */; };
+		D41C553526E60BB0008E048C /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C553426E60BB0008E048C /* SharedItem.swift */; };
+		D41F669F26F204760061BD5A /* LoadStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F669E26F204760061BD5A /* LoadStates.swift */; };
+		D41F66A226F205900061BD5A /* SharedProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F66A126F205900061BD5A /* SharedProjectsView.swift */; };
+		D41F66A426F21D690061BD5A /* SharedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41F66A326F21D690061BD5A /* SharedItemsView.swift */; };
 		D4202CEF25F7945F007E905C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4202CEE25F7945F007E905C /* HomeViewModel.swift */; };
 		D4202CF425FB9009007E905C /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4202CF325FB9009007E905C /* ItemRowViewModel.swift */; };
 		D4238797262D79CE004EC194 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4238796262D79CE004EC194 /* SKProduct-LocalizedPrice.swift */; };
@@ -115,6 +120,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D41C553226E60AC0008E048C /* SharedProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProject.swift; sourceTree = "<group>"; };
+		D41C553426E60BB0008E048C /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
+		D41F669E26F204760061BD5A /* LoadStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStates.swift; sourceTree = "<group>"; };
+		D41F66A126F205900061BD5A /* SharedProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProjectsView.swift; sourceTree = "<group>"; };
+		D41F66A326F21D690061BD5A /* SharedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemsView.swift; sourceTree = "<group>"; };
 		D4202CEE25F7945F007E905C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D4202CF325FB9009007E905C /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		D4238796262D79CE004EC194 /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
@@ -225,6 +235,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D41F66A026F204D50061BD5A /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				D41F669E26F204760061BD5A /* LoadStates.swift */,
+				D41C553226E60AC0008E048C /* SharedProject.swift */,
+				D41F66A126F205900061BD5A /* SharedProjectsView.swift */,
+				D41F66A326F21D690061BD5A /* SharedItemsView.swift */,
+				D41C553426E60BB0008E048C /* SharedItem.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
 		D42387AA262D9A71004EC194 /* Unlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +392,7 @@
 				D44DBD8D264BE86500054C3F /* SceneDelegate.swift */,
 				D4806C5225A87DBD000D4C71 /* Activities */,
 				D42387AA262D9A71004EC194 /* Unlock */,
+				D41F66A026F204D50061BD5A /* Community */,
 				D4806C5325A87DCC000D4C71 /* Extensions */,
 				D4806C5A25A880B8000D4C71 /* Localization */,
 				D4806C5B25A880E8000D4C71 /* Configuration */,
@@ -653,6 +676,8 @@
 				D42387A1262D7C36004EC194 /* ProductView.swift in Sources */,
 				D4F3452A255EB618001F1073 /* Bundle-Decodable.swift in Sources */,
 				D488E05F2544359600691AD7 /* Main.xcdatamodeld in Sources */,
+				D41F669F26F204760061BD5A /* LoadStates.swift in Sources */,
+				D41F66A226F205900061BD5A /* SharedProjectsView.swift in Sources */,
 				D4202CEF25F7945F007E905C /* HomeViewModel.swift in Sources */,
 				D4D6BF60261F08CC00FDCFD3 /* UnlockManager.swift in Sources */,
 				D46275B926A1A71A00F009FB /* DataController-StoreKit.swift in Sources */,
@@ -660,8 +685,10 @@
 				D43743CC255AAAA000F7A8ED /* SelectSomethingView.swift in Sources */,
 				D4F34530255ECEA3001F1073 /* Award.swift in Sources */,
 				D467F72D269457FA00142200 /* DataController-Reminders.swift in Sources */,
+				D41C553326E60AC0008E048C /* SharedProject.swift in Sources */,
 				D4F34533255ECFE0001F1073 /* AwardsView.swift in Sources */,
 				D4DFDDB625CAB4E5007DFB4A /* Sequence-Sorting.swift in Sources */,
+				D41F66A426F21D690061BD5A /* SharedItemsView.swift in Sources */,
 				D4619DAF254594DA00CC203C /* Project-CoreDataHelpers.swift in Sources */,
 				D430034B254C4213002CD432 /* EditProjectView.swift in Sources */,
 				D467F72F2694593E00142200 /* DataController-Award.swift in Sources */,
@@ -678,6 +705,7 @@
 				D4619DAC2545929800CC203C /* Item-CoreDataHelpers.swift in Sources */,
 				D4238797262D79CE004EC194 /* SKProduct-LocalizedPrice.swift in Sources */,
 				D4DCE84825ED0FF200C1EA63 /* ProjectsViewModel.swift in Sources */,
+				D41C553526E60BB0008E048C /* SharedItem.swift in Sources */,
 				D4B7A54325482E8400BC84E6 /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
